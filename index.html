@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+<title>積立貯筋口座</title>
+<meta name="description" content="運動を身体への投資と捉え、身体資産を積み立てていくトレーニング記録アプリ" />
+<meta name="theme-color" content="#F6F1E6" />
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" href="icons/icon-192.png" />
+<link rel="apple-touch-icon" href="icons/icon-192.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="貯筋口座" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="app">
+  <header class="app-header">
+    <div class="brand">
+      <span class="mark">積</span>
+      <span class="title">積立貯筋口座</span>
+    </div>
+    <div class="season-chip" id="seasonChip">Season 1</div>
+  </header>
+
+  <main class="view" id="mainView"></main>
+
+  <nav class="bottom-nav" id="bottomNav">
+    <button data-view="home"><span class="icon">🏠</span>ホーム</button>
+    <button data-view="record"><span class="icon">✏️</span>記録</button>
+    <button data-view="asset"><span class="icon">📊</span>資産</button>
+    <button data-view="ledger"><span class="icon">🧾</span>履歴</button>
+    <button data-view="more"><span class="icon">☰</span>その他</button>
+  </nav>
+</div>
+
+<div id="overlayRoot"></div>
+<div id="toastRoot"></div>
+
+<!-- データ層 -->
+<script src="js/data/config.js"></script>
+<script src="js/data/exercises.js"></script>
+<script src="js/data/models.js"></script>
+<script src="js/data/storage.js"></script>
+
+<!-- 計算エンジン -->
+<script src="js/engine/cardioCalculator.js"></script>
+<script src="js/engine/strengthCalculator.js"></script>
+<script src="js/engine/enduranceCalculator.js"></script>
+<script src="js/engine/decayCalculator.js"></script>
+<script src="js/engine/habitCalculator.js"></script>
+<script src="js/engine/bptCalculator.js"></script>
+<script src="js/engine/seasonManager.js"></script>
+
+<!-- UI -->
+<script src="js/ui/format.js"></script>
+<script src="js/ui/chart.js"></script>
+<script src="js/ui/picker.js"></script>
+<script src="js/ui/confirm.js"></script>
+<script src="js/ui/home.js"></script>
+<script src="js/ui/record.js"></script>
+<script src="js/ui/exercisePicker.js"></script>
+<script src="js/ui/template.js"></script>
+<script src="js/ui/result.js"></script>
+<script src="js/ui/edit.js"></script>
+<script src="js/ui/asset.js"></script>
+<script src="js/ui/ledger.js"></script>
+<script src="js/ui/seasons.js"></script>
+<script src="js/ui/science.js"></script>
+<script src="js/ui/more.js"></script>
+<script src="js/ui/router.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
